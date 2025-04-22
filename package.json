@@ -1,0 +1,81 @@
+{
+  "name": "remark-linkify",
+  "version": "0.0.0",
+  "description": "A remark plugin to automatically convert URLs and email addresses into links.",
+  "sideEffects": false,
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --dts --clean",
+    "dev": "pnpm run build --watch",
+    "lint": "eslint . --ext .ts",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "coverage": "vitest run --coverage",
+    "coverage:badge": "make-coverage-badge --output-path ./coverage/coverage.svg",
+    "changeset": "changeset",
+    "version": "changeset version",
+    "release": "pnpm run build && changeset publish"
+  },
+  "keywords": [
+    "remark",
+    "remark-plugin",
+    "markdown",
+    "linkify",
+    "url",
+    "email",
+    "links"
+  ],
+  "author": "Your Name <you@example.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hoqua/remark-linkify.git"
+  },
+  "bugs": {
+    "url": "https://github.com/hoqua/remark-linkify/issues"
+  },
+  "homepage": "https://github.com/hoqua/remark-linkify#readme",
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "peerDependencies": {
+    "remark": "^14.0.0 || ^15.0.0"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.29.2",
+    "@types/linkify-it": "^5.0.0",
+    "@types/mdast": "^4.0.4",
+    "@types/node": "^22.14.1",
+    "@types/unist": "^3.0.3",
+    "@typescript-eslint/eslint-plugin": "^8.31.0",
+    "@typescript-eslint/parser": "^8.31.0",
+    "@vitest/coverage-v8": "^3.1.2",
+    "eslint": "^9.25.1",
+    "eslint-plugin-vitest": "^0.5.4",
+    "make-coverage-badge": "^1.2.0",
+    "remark": "^15.0.1",
+    "tsup": "^8.4.0",
+    "typescript": "^5.8.3",
+    "typescript-eslint": "^8.31.0",
+    "vitest": "^3.1.2"
+  },
+  "dependencies": {
+    "linkify-it": "^5.0.0",
+    "unist-util-visit": "^5.0.0"
+  }
+}
