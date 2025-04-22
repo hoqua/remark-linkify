@@ -1,5 +1,0 @@
----
-"remark-linkify": patch
----
-
-test
