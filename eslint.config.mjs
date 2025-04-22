@@ -3,16 +3,14 @@ import tseslint from 'typescript-eslint';
 import vitestPlugin from 'eslint-plugin-vitest';
 
 export default tseslint.config(
-  // Global rules and ignores
   eslint.configs.recommended,
   {
-    // Global ignores - apply to all configurations below
     ignores: [
       'dist/**',
       'node_modules/**',
       'coverage/**',
-      'eslint.config.mjs', // Don't lint the config file itself with type-aware rules
-      'vitest.config.ts', // Ignore other config files
+      'eslint.config.mjs', 
+      'vitest.config.ts',
       'tsup.config.ts',
     ],
   },
@@ -21,8 +19,8 @@ export default tseslint.config(
     extends: [...tseslint.configs.recommendedTypeChecked],
     languageOptions: {
       parserOptions: {
-        project: true, // Use tsconfig.json from the root
-        tsconfigRootDir: import.meta.dirname, // Helps resolve tsconfig.json
+        project: true,
+        tsconfigRootDir: import.meta.dirname,
       },
     },
   },
