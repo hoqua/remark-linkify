@@ -9,8 +9,13 @@ concurrency: ${{ github.workflow }}-${{ github.ref }}
 jobs:
   publish:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - uses: pnpm/action-setup@v3
         with:
           version: 9.5.0
