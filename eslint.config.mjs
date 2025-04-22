@@ -16,11 +16,8 @@ export default tseslint.config(
       'tsup.config.ts',
     ],
   },
-
-  // Configuration for TypeScript source files
   {
     files: ['src/**/*.ts'],
-    // Apply TS recommended type-checked rules ONLY to these files
     extends: [...tseslint.configs.recommendedTypeChecked],
     languageOptions: {
       parserOptions: {
@@ -28,21 +25,10 @@ export default tseslint.config(
         tsconfigRootDir: import.meta.dirname, // Helps resolve tsconfig.json
       },
     },
-    rules: {
-      // Add specific TS source file rules or overrides here
-    },
   },
 
-  // Configuration for Test files
   {
     files: ['src/**/*.test.ts', 'src/**/*.spec.ts'],
-    // Apply vitest recommended rules
     extends: [vitestPlugin.configs.recommended],
-    languageOptions: {
-      // globals: { ...vitestPlugin.environments.env.globals }, // If needed explicitly
-    },
-    rules: {
-      // Add specific test file rules or overrides here
-    },
   },
 ); 
