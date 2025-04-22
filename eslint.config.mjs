@@ -24,7 +24,6 @@ export default tseslint.config(
       },
     },
   },
-
   {
     files: ['src/**/*.test.ts', 'src/**/*.spec.ts'],
     extends: [vitestPlugin.configs.recommended],
