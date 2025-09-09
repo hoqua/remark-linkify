@@ -60,3 +60,5 @@ export function remarkLinkify(): Transformer<Root, Root> {
     );
   };
 }
+
+export default remarkLinkify;
