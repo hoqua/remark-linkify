@@ -1,5 +1,11 @@
 # remark-linkify
 
+## 1.1.0
+
+### Minor Changes
+
+- 7dc4392: added default export
+
 ## 1.0.2
 
 ### Patch Changes
