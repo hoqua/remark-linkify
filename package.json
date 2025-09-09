@@ -1,6 +1,6 @@
 {
   "name": "remark-linkify",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A remark plugin to automatically convert URLs and email addresses into links.",
   "sideEffects": false,
   "main": "./dist/index.js",
